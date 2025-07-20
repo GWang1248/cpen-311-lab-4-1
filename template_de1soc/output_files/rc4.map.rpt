@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rc4
-Sat Jul 19 23:11:18 2025
+Sun Jul 20 01:13:16 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sat Jul 19 23:11:18 2025           ;
+; Analysis & Synthesis Status ; Failed - Sun Jul 20 01:13:16 2025           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; rc4                                         ;
 ; Top-level Entity Name       ; ksa                                         ;
@@ -161,21 +161,20 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Jul 19 23:11:08 2025
+    Info: Processing started: Sun Jul 20 01:13:04 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rc4 -c rc4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
-Error (10500): VHDL syntax error at ksa.vhd(31) near text "=";  expecting "(", or "'", or "." File: D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd Line: 31
-Error (10500): VHDL syntax error at ksa.vhd(31) near text { File: D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd Line: 31
-Error (10500): VHDL syntax error at ksa.vhd(33) near text } File: D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd Line: 33
+Error (10500): VHDL syntax error at ksa.vhd(37) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd Line: 37
+Error (10500): VHDL syntax error at ksa.vhd(43) near text "begin";  expecting an identifier ("begin" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd Line: 43
 Info (12021): Found 0 design units, including 0 entities, in source file ksa.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file s_memory.vhd
     Info (12022): Found design unit 1: s_memory-SYN File: D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/s_memory.vhd Line: 54
     Info (12023): Found entity 1: s_memory File: D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/s_memory.vhd Line: 42
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 4845 megabytes
-    Error: Processing ended: Sat Jul 19 23:11:18 2025
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:18
+    Error: Processing ended: Sun Jul 20 01:13:16 2025
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:21
 
 

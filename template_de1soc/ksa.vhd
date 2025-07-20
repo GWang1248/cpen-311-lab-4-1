@@ -24,13 +24,41 @@ architecture rtl of ksa is
         nIn : IN STD_LOGIC_VECTOR (3 DOWNTO 0)
     );
     END COMPONENT;
+	 
+		component task_1 is
+		port (
+			clk : in std_logic;
+			rst : in std_logic;
+			start : in std_logic;
+			s_address : out std_logic(7 downto 0);
+			s_data : out std_logic(7 downto 0);
+			s_wren : out std_logic;
+			done : out std_logic;
+		);
+		end component;
    
     -- clock and reset signals  
 	 signal clk, reset_n : std_logic;
 
 begin
 
-    clk <= CLOCK_50;
-    reset_n <= KEY(3);
+		clk <= CLOCK_50;
+		reset_n <= KEY(3);
 
+		U_TASK1: task_1
+		port map(
+			clk	<= CLOCK_50
+			rst	<= KEY(3),
+			start	<= KEY(0),
+			s_address  <= s_address_signal,
+         s_data     <= s_data_signal,
+         s_wren     <= s_wren_signal,
+         done       <= done_signal
+		);
+		
+		U_DEC: SevenSegmentDisplayDecoder
+		port map(
+			ssOut => HEX0,
+         nIn   => s_address_signal(3 downto 0)
+		);
 end RTL;
