@@ -26,7 +26,7 @@ architecture rtl of ksa is
     END COMPONENT;
    
     -- clock and reset signals  
-	 signal clk, reset_n : std_logic;										
+	 signal clk, reset_n : std_logic;
 
 begin
 
@@ -34,5 +34,3 @@ begin
     reset_n <= KEY(3);
 
 end RTL;
-
-

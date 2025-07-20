@@ -1,13 +1,13 @@
-TimeQuest Timing Analyzer report for rc4
-Sun May 29 17:40:37 2016
-Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+Timing Analyzer report for rc4
+Sat Jul 19 23:03:51 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. TimeQuest Timing Analyzer Summary
+  2. Timing Analyzer Summary
   3. Parallel Compilation
   4. SDC File List
   5. Clocks
@@ -18,76 +18,73 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
  10. Slow 1100mV 85C Model Recovery Summary
  11. Slow 1100mV 85C Model Removal Summary
  12. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 13. Slow 1100mV 85C Model Datasheet Report
- 14. Slow 1100mV 85C Model Metastability Report
- 15. Slow 1100mV 0C Model Fmax Summary
- 16. Slow 1100mV 0C Model Setup Summary
- 17. Slow 1100mV 0C Model Hold Summary
- 18. Slow 1100mV 0C Model Recovery Summary
- 19. Slow 1100mV 0C Model Removal Summary
- 20. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 21. Slow 1100mV 0C Model Datasheet Report
- 22. Slow 1100mV 0C Model Metastability Report
- 23. Fast 1100mV 85C Model Setup Summary
- 24. Fast 1100mV 85C Model Hold Summary
- 25. Fast 1100mV 85C Model Recovery Summary
- 26. Fast 1100mV 85C Model Removal Summary
- 27. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 28. Fast 1100mV 85C Model Datasheet Report
- 29. Fast 1100mV 85C Model Metastability Report
- 30. Fast 1100mV 0C Model Setup Summary
- 31. Fast 1100mV 0C Model Hold Summary
- 32. Fast 1100mV 0C Model Recovery Summary
- 33. Fast 1100mV 0C Model Removal Summary
- 34. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 35. Fast 1100mV 0C Model Datasheet Report
- 36. Fast 1100mV 0C Model Metastability Report
- 37. Multicorner Timing Analysis Summary
- 38. Board Trace Model Assignments
- 39. Input Transition Times
- 40. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 41. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 42. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 43. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 44. Clock Transfers
- 45. Report TCCS
- 46. Report RSKM
- 47. Unconstrained Paths
- 48. TimeQuest Timing Analyzer Messages
+ 13. Slow 1100mV 85C Model Metastability Summary
+ 14. Slow 1100mV 0C Model Fmax Summary
+ 15. Slow 1100mV 0C Model Setup Summary
+ 16. Slow 1100mV 0C Model Hold Summary
+ 17. Slow 1100mV 0C Model Recovery Summary
+ 18. Slow 1100mV 0C Model Removal Summary
+ 19. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 20. Slow 1100mV 0C Model Metastability Summary
+ 21. Fast 1100mV 85C Model Setup Summary
+ 22. Fast 1100mV 85C Model Hold Summary
+ 23. Fast 1100mV 85C Model Recovery Summary
+ 24. Fast 1100mV 85C Model Removal Summary
+ 25. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 26. Fast 1100mV 85C Model Metastability Summary
+ 27. Fast 1100mV 0C Model Setup Summary
+ 28. Fast 1100mV 0C Model Hold Summary
+ 29. Fast 1100mV 0C Model Recovery Summary
+ 30. Fast 1100mV 0C Model Removal Summary
+ 31. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 32. Fast 1100mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 39. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 40. Clock Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus II License Agreement,
-the Altera MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                        ;
-+--------------------+-----------------------------------------------------+
-; Quartus II Version ; Version 14.1.0 Build 186 12/03/2014 SJ Full Version ;
-; Revision Name      ; rc4                                                 ;
-; Device Family      ; Cyclone V                                           ;
-; Device Name        ; 5CSEMA5F31C6                                        ;
-; Timing Models      ; Final                                               ;
-; Delay Model        ; Combined                                            ;
-; Rise/Fall Delays   ; Enabled                                             ;
-+--------------------+-----------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; rc4                                                 ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CSEMA5F31C6                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -95,16 +92,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
-;     Processors 5-8         ;   0.0%      ;
+;     Processors 2-10        ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -113,7 +109,7 @@ agreement for further details.
 +------------------------+--------+--------------------------+
 ; SDC File Path          ; Status ; Read at                  ;
 +------------------------+--------+--------------------------+
-; timing_constraints.sdc ; OK     ; Sun May 29 17:40:33 2016 ;
+; timing_constraints.sdc ; OK     ; Sat Jul 19 23:03:48 2025 ;
 +------------------------+--------+--------------------------+
 
 
@@ -168,15 +164,9 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
-; Slow 1100mV 85C Model Datasheet Report ;
-------------------------------------------
-Nothing to report.
-
-
-----------------------------------------------
-; Slow 1100mV 85C Model Metastability Report ;
-----------------------------------------------
+-----------------------------------------------
+; Slow 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -216,15 +206,9 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------
-; Slow 1100mV 0C Model Datasheet Report ;
------------------------------------------
-Nothing to report.
-
-
----------------------------------------------
-; Slow 1100mV 0C Model Metastability Report ;
----------------------------------------------
+----------------------------------------------
+; Slow 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -258,15 +242,9 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
-; Fast 1100mV 85C Model Datasheet Report ;
-------------------------------------------
-Nothing to report.
-
-
-----------------------------------------------
-; Fast 1100mV 85C Model Metastability Report ;
-----------------------------------------------
+-----------------------------------------------
+; Fast 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -300,15 +278,9 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------
-; Fast 1100mV 0C Model Datasheet Report ;
------------------------------------------
-Nothing to report.
-
-
----------------------------------------------
-; Fast 1100mV 0C Model Metastability Report ;
----------------------------------------------
+----------------------------------------------
+; Fast 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -670,7 +642,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 
 
 +------------------------------------------------+
-; Unconstrained Paths                            ;
+; Unconstrained Paths Summary                    ;
 +---------------------------------+-------+------+
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
@@ -683,23 +655,33 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 
 
-+------------------------------------+
-; TimeQuest Timing Analyzer Messages ;
-+------------------------------------+
++------------------------------------------+
+; Clock Status Summary                     ;
++----------+----------+------+-------------+
+; Target   ; Clock    ; Type ; Status      ;
++----------+----------+------+-------------+
+; CLOCK_50 ; CLOCK_50 ; Base ; Constrained ;
++----------+----------+------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
-    Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
-    Info: Processing started: Sun May 29 17:40:30 2016
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Jul 19 23:03:46 2025
 Info: Command: quartus_sta rc4 -c rc4
-Info: qsta_default_script.tcl version: #3
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: 'timing_constraints.sdc'
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
@@ -735,10 +717,10 @@ Info (332140): No Removal paths to report
 Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 975 megabytes
-    Info: Processing ended: Sun May 29 17:40:37 2016
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 5180 megabytes
+    Info: Processing ended: Sat Jul 19 23:03:51 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 
