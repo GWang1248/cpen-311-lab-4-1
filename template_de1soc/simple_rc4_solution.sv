@@ -1,4 +1,4 @@
-module ksa(input logic CLOCK_50,
+module ksa_solution(input logic CLOCK_50,
 			input logic [3:0] KEY,
 			input logic [3:0] SW,
 			output logic [9:0] LEDR,
