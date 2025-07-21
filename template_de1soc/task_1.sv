@@ -5,17 +5,17 @@ module task_1 (
     output logic [7:0]  s_address,     // address bus into s_memory
     output logic [7:0]  s_data,        // data bus into s_memory
     output logic        s_wren,        // write enable for s_memory
-    output logic        done           // asserted when init (0–255) is done
-)
+    output logic        done          // asserted when init (0–255) is done
+);
 
     //FSM States Define: IDLE, WRITE, DONE
-    typedef enum logic [1:0] { 
+    typedef enum logic [1:0] {
         IDLE,
         WRITE,
         DONE
-     } state_machine;
+    } state_t;
 
-     state_machine  state, next_state;
+     state_t  state, next_state;
      logic [7:0]    count;            // 8-bit Counter, contorl both address and value
 
     //Set Reset condition, e.g. Reset State
@@ -30,4 +30,32 @@ module task_1 (
                 count <= count + 1;
         end
     end
+    // Set FSM to work:
+    always_comb begin
+        next_state = state;
+        s_address  = count;
+        s_data     = count;
+        s_wren     = 1'b0;
+        done       = 1'b0;
+
+        case (state)
+            IDLE: begin
+                if (start)
+                    next_state = WRITE;
+                end
+            WRITE: begin
+                s_wren = 1'b1;
+                if (count == 8'hFF)
+                    next_state = DONE;
+                else
+                    next_state = WRITE;
+                end
+            DONE: begin
+                s_wren = 1'b0;
+                done = 1'b1;
+                next_state = DONE;
+                end
+        endcase
+    end
+
 endmodule

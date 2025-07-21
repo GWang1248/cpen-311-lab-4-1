@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA_lite/18.1.0/lab7
+Eksa
+Z0 w1753071129
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dD:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc
+Z5 8D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd
+Z6 FD:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd
+l0
+L5
+V>^<=oMm5A:cG2=c1N?71O1
+!s100 LUkb;QXE?aASX@e25;:n80
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1753071138
+!i10b 1
+Z9 !s108 1753071138.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd|
+Z11 !s107 D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/ksa.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+DEx4 work 3 ksa 0 22 >^<=oMm5A:cG2=c1N?71O1
+l37
+L19
+VF4BUW2Q6DIUofQ^>F4l_j3
+!s100 W`T<jeRVEbm2DO]^h^ojX1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vtask_1
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R8
+!i10b 1
+!s100 F4LMWnKSfR<fOFXXSiO=^1
+IBPm[GHJT6@U?i?o14GQ=T0
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 task_1_sv_unit
+S1
+R4
+w1753070042
+8D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/task_1.sv
+FD:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/task_1.sv
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+R9
+!s107 D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/task_1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/UBC/CPEN311/cpen-311-lab-4-1/template_de1soc/task_1.sv|
+!i113 1
+o-work work -sv
+tCvgOpt 0
