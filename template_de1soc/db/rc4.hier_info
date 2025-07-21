@@ -1,9 +1,9 @@
 |ksa
-CLOCK_50 => ~NO_FANOUT~
-KEY[0] => ~NO_FANOUT~
+CLOCK_50 => CLOCK_50.IN1
+KEY[0] => start.IN1
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
+KEY[3] => reset.IN1
 SW[0] => ~NO_FANOUT~
 SW[1] => ~NO_FANOUT~
 SW[2] => ~NO_FANOUT~
@@ -18,47 +18,158 @@ LEDR[6] <= <GND>
 LEDR[7] <= <GND>
 LEDR[8] <= <GND>
 LEDR[9] <= <GND>
-HEX0[0] <= <GND>
-HEX0[1] <= <GND>
-HEX0[2] <= <GND>
-HEX0[3] <= <GND>
-HEX0[4] <= <GND>
-HEX0[5] <= <GND>
-HEX0[6] <= <GND>
-HEX1[0] <= <GND>
-HEX1[1] <= <GND>
-HEX1[2] <= <GND>
-HEX1[3] <= <GND>
-HEX1[4] <= <GND>
-HEX1[5] <= <GND>
-HEX1[6] <= <GND>
-HEX2[0] <= <GND>
-HEX2[1] <= <GND>
-HEX2[2] <= <GND>
-HEX2[3] <= <GND>
-HEX2[4] <= <GND>
-HEX2[5] <= <GND>
-HEX2[6] <= <GND>
-HEX3[0] <= <GND>
-HEX3[1] <= <GND>
-HEX3[2] <= <GND>
-HEX3[3] <= <GND>
-HEX3[4] <= <GND>
-HEX3[5] <= <GND>
-HEX3[6] <= <GND>
-HEX4[0] <= <GND>
-HEX4[1] <= <GND>
-HEX4[2] <= <GND>
-HEX4[3] <= <GND>
-HEX4[4] <= <GND>
-HEX4[5] <= <GND>
-HEX4[6] <= <GND>
-HEX5[0] <= <GND>
-HEX5[1] <= <GND>
-HEX5[2] <= <GND>
-HEX5[3] <= <GND>
-HEX5[4] <= <GND>
-HEX5[5] <= <GND>
-HEX5[6] <= <GND>
+HEX0[0] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst0.ssOut
+HEX0[1] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst0.ssOut
+HEX0[2] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst0.ssOut
+HEX0[3] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst0.ssOut
+HEX0[4] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst0.ssOut
+HEX0[5] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst0.ssOut
+HEX0[6] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst0.ssOut
+HEX1[0] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst1.ssOut
+HEX1[1] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst1.ssOut
+HEX1[2] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst1.ssOut
+HEX1[3] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst1.ssOut
+HEX1[4] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst1.ssOut
+HEX1[5] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst1.ssOut
+HEX1[6] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst1.ssOut
+HEX2[0] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst2.ssOut
+HEX2[1] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst2.ssOut
+HEX2[2] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst2.ssOut
+HEX2[3] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst2.ssOut
+HEX2[4] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst2.ssOut
+HEX2[5] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst2.ssOut
+HEX2[6] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst2.ssOut
+HEX3[0] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst3.ssOut
+HEX3[1] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst3.ssOut
+HEX3[2] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst3.ssOut
+HEX3[3] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst3.ssOut
+HEX3[4] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst3.ssOut
+HEX3[5] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst3.ssOut
+HEX3[6] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst3.ssOut
+HEX4[0] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst4.ssOut
+HEX4[1] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst4.ssOut
+HEX4[2] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst4.ssOut
+HEX4[3] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst4.ssOut
+HEX4[4] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst4.ssOut
+HEX4[5] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst4.ssOut
+HEX4[6] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst4.ssOut
+HEX5[0] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst5.ssOut
+HEX5[1] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst5.ssOut
+HEX5[2] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst5.ssOut
+HEX5[3] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst5.ssOut
+HEX5[4] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst5.ssOut
+HEX5[5] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst5.ssOut
+HEX5[6] <= SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst5.ssOut
+
+
+|ksa|task_1:inst_task_1
+clk => state[0].CLK
+clk => state[1].CLK
+reset => state[0].ACLR
+reset => state[1].ACLR
+start => next_state.OUTPUTSELECT
+start => next_state.OUTPUTSELECT
+s_address[0] <= <GND>
+s_address[1] <= <GND>
+s_address[2] <= <GND>
+s_address[3] <= <GND>
+s_address[4] <= <GND>
+s_address[5] <= <GND>
+s_address[6] <= <GND>
+s_address[7] <= <GND>
+s_data[0] <= <GND>
+s_data[1] <= <GND>
+s_data[2] <= <GND>
+s_data[3] <= <GND>
+s_data[4] <= <GND>
+s_data[5] <= <GND>
+s_data[6] <= <GND>
+s_data[7] <= <GND>
+s_wren <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+done <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ksa|SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst0
+ssOut[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[0] => Decoder0.IN3
+nIn[1] => Decoder0.IN2
+nIn[2] => Decoder0.IN1
+nIn[3] => Decoder0.IN0
+
+
+|ksa|SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst1
+ssOut[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[0] => Decoder0.IN3
+nIn[1] => Decoder0.IN2
+nIn[2] => Decoder0.IN1
+nIn[3] => Decoder0.IN0
+
+
+|ksa|SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst2
+ssOut[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[0] => Decoder0.IN3
+nIn[1] => Decoder0.IN2
+nIn[2] => Decoder0.IN1
+nIn[3] => Decoder0.IN0
+
+
+|ksa|SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst3
+ssOut[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[0] => Decoder0.IN3
+nIn[1] => Decoder0.IN2
+nIn[2] => Decoder0.IN1
+nIn[3] => Decoder0.IN0
+
+
+|ksa|SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst4
+ssOut[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[0] => Decoder0.IN3
+nIn[1] => Decoder0.IN2
+nIn[2] => Decoder0.IN1
+nIn[3] => Decoder0.IN0
+
+
+|ksa|SevenSegmentDisplayDecoder:SevenSegmentDisplayDecoder_inst5
+ssOut[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ssOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[0] => Decoder0.IN3
+nIn[1] => Decoder0.IN2
+nIn[2] => Decoder0.IN1
+nIn[3] => Decoder0.IN0
 
 

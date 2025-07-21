@@ -1,0 +1,60 @@
+module task_1 (
+    input logic clk,				//System Clock
+	input logic reset,				//Reset Input (KEY[3])
+	input logic start,				//Start Input (KEY[0])
+	output logic [7:0] s_address,	//Address of bus to store into s_memory
+	output logic [7:0] s_data,		//Data of bus to store into s_memory
+	output logic s_wren,			//Indication signal of whether s allowed to be written or no
+	output logic done,				//Indication that task 1 is done
+);
+
+	//FSM design and register
+	typedef enum logic [1:0] {
+        IDLE,
+        WRITING,
+        DONE
+	} state_1;
+
+    state_1       state, next_state;
+    logic [7:0]   count;
+
+	logic [7:0] counter;
+
+	//State Register and Counter Logic
+	always_ff @(posedge clk or posedge reset) begin
+		if (reset) begin;
+			state <= IDLE;
+			count <= 8'b0;
+		end
+		else begin
+			state <= next_state;
+			if (state == WRITE && counter != 8'hFF)
+			count <= count +1;
+		end
+	end
+
+	//FSM states define
+	always_comb begin
+		next_state = state;
+		s_address = counter;
+		s_data = counter;
+		s_wren = 1'b0;
+		done = 1'b0;
+
+		case (state)
+			IDLE: begin
+				if (start)
+					next_state = WRITE;
+				end
+			WRITE: begin
+				s_wren =  1'b1;
+				if (counter = 8'hFF)
+					next_state = DONE;
+				end
+			DONE: begin
+				s_wren = 1'b0;
+				done = 1'b1;
+				end
+		endcase
+	end
+endmodule

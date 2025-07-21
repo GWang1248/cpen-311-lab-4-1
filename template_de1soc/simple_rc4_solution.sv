@@ -22,13 +22,13 @@ module ksa(input logic CLOCK_50,
 	assign start = KEY[0];
 
 	task_1 inst_task_1 (
-		.CLOCK_50(clk),
+		.clk(CLOCK_50),
 		.reset(reset),
 		.start(start),
-		.s_address_1(s_address),
-		.s_data_1(s_data),
-		.s_wren_1(s_wren),
-		.task_1_done(done)
+		.s_address(s_address_1),
+		.s_data(s_data_1),
+		.s_wren(s_wren_1),
+		.done(task_1_done)
 	); //Instantiate Task 1 Module
 	
 	logic [23:0] secret_key;
